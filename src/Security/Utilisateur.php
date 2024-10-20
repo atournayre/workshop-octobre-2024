@@ -19,6 +19,11 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    public static function creer(): self
+    {
+        return new Utilisateur();
+    }
+
     public function getEmail(): ?string
     {
         return $this->email;
